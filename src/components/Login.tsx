@@ -4,7 +4,7 @@ import './Login.css';
 // SHA-256 hash of your password - change this to your own!
 // To generate: run in browser console:
 //   crypto.subtle.digest('SHA-256', new TextEncoder().encode('yourpassword')).then(h => console.log(Array.from(new Uint8Array(h)).map(b => b.toString(16).padStart(2, '0')).join('')))
-const PASSWORD_HASH = 'CHANGE_ME_TO_YOUR_PASSWORD_HASH';
+const PASSWORD_HASH = 'e17d78ee2071b40ebb4cd8e039fb7ebc51343e0230957c4e164b81a2ce1e0c42';
 
 interface LoginProps {
   onLogin: () => void;
