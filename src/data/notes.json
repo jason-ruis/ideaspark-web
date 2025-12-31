@@ -1,0 +1,12 @@
+[
+  {
+    "path": "sample-note.md",
+    "name": "sample-note.md",
+    "content": "# Sample Note\n\nThis is a sample note for local development. #insight #idea\n\nYour actual notes will be fetched from your GitHub repository when deployed.\n\n[[Connected Note]] [[Another Link]]"
+  },
+  {
+    "path": "another-thought.md",
+    "name": "another-thought.md",
+    "content": "# Another Thought\n\nThis is another example note to test the interface. #concept #thought\n\nSwipe up to skip, swipe down to keep!\n\n[[Sample Note]]"
+  }
+]
