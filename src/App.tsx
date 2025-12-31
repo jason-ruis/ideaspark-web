@@ -3,9 +3,13 @@ import { AnimatePresence } from 'framer-motion';
 import type { Note } from './types/Note';
 import { loadNotes, shuffleNotes } from './services/noteService';
 import { NoteCard } from './components/NoteCard';
+import { Login } from './components/Login';
 import './App.css';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem('ideaspark_auth') === 'true';
+  });
   const [notes, setNotes] = useState<Note[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +38,10 @@ function App() {
   };
 
   const currentNote = notes[currentIndex];
+
+  if (!isAuthenticated) {
+    return <Login onLogin={() => setIsAuthenticated(true)} />;
+  }
 
   if (isLoading) {
     return (
